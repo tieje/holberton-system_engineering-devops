@@ -1,1 +1,9 @@
 #!/bin/bash
+# This script is displaying "Holberton School" 10 times with an until loop
+counter=0
+until [ $counter -gt 9 ]
+do
+    echo "Holberton School"
+    ((counter++))
+done
+exit 0
