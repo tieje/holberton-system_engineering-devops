@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # prints a fizzbuzz
 for i in {1..100}
 do

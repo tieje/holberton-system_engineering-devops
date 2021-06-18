@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # displays the time for 12 hours and 59 min
 h=0
 min=1
