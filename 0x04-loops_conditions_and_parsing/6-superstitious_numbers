@@ -4,13 +4,13 @@ i=1
 while [ "$i" -le 20 ]
 do
     if [ "$i" -eq 4 ]
-        then
+    then
         echo "bad luck from China"
     elif [ "$i" -eq 9 ]
-        then
+    then
         echo "bad luck from Japan"
     elif [ "$i" -eq 17 ]
-        then
+    then
         echo "bad luck from Italy"
     else
         echo "$i"
