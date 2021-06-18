@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # displays content of the current directory in list format where extension is not shown
-for i in $(find . -type f | cut -d "-" -f 2)
+for i in $(ls | cut -d "-" -f 2)
 do
     echo "$i"
 done
