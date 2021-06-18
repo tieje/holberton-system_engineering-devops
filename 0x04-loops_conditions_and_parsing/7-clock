@@ -1,1 +1,19 @@
 #!/bin/bash
+# displays the time for 12 hours and 59 min
+h=0
+min=1
+echo "Hour: $h"
+while [ "$h" -lt 12 ]
+do
+    if [ "$min" -eq 59 ]
+    then
+        echo "$min"
+        ((h++))
+        echo "Hour: $h"
+        min=0
+    else
+        echo "$min"
+        ((min++))
+    fi
+done
+exit 0

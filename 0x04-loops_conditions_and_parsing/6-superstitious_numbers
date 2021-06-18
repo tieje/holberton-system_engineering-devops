@@ -1,4 +1,5 @@
 #!/bin/bash
+# Prints suspicious lines for suspicious numbers
 i=1
 while [ "$i" -le 20 ]
 do
