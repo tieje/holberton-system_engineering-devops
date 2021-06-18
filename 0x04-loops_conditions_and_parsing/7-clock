@@ -10,7 +10,7 @@ do
         echo "$min"
         ((h++))
         echo "Hour: $h"
-        min=0
+        min=1
     else
         echo "$min"
         ((min++))
