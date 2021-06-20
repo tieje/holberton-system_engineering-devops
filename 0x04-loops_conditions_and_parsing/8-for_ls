@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # displays content of the current directory
-for i in $(find . type  f | cut -d "-" -f 2)
+files=$(ls)
+for i in $files
 do
-    echo "$i"
+    echo "$i" | cut -d "-" -f 2
 done
