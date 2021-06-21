@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# display phrase continuously
 i=0
 while [ $i -eq 0 ]
 do
