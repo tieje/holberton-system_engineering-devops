@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# ssh config file to login without needing a password
+Host holberton
+    HostName 35.243.246.187
+    User ubuntu
+    Port 22
+    IdentityFile ~/.ssh/holberton
