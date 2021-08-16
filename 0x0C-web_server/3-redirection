@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# install nginx and redirect ot removed permanently
+apt-get update
+apt-get -y install nginx
+echo 'Holberton School' > /var/www/html/index.html
+sed -i '/server_name _/a location /redirect_me { return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4; }' /etc/nginx/sites-available/default
+service nginx restart
