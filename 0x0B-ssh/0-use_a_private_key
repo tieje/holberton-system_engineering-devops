@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # ssh into server
+# ./0-transfer_file ./1-install_nginx_web_server 34.138.234.27 ubuntu ~/.ssh/holberton.pub
 ssh -i ~/.ssh/holberton ubuntu@34.138.234.27

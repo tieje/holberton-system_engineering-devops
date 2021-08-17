@@ -1,0 +1,11 @@
+== Info:   Trying 0.0.0.0:8080...
+== Info: TCP_NODELAY set
+== Info: Connected to 0 (127.0.0.1) port 8080 (#0)
+=> Send header, 70 bytes (0x46)
+0000: GET / HTTP/1.1
+0010: Host: 0:8080
+001e: User-Agent: curl/7.68.0
+0037: Accept: */*
+0044: 
+== Info: Recv failure: Connection reset by peer
+== Info: Closing connection 0
