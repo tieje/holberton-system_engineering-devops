@@ -3,4 +3,20 @@
 sudo apt update
 sudo apt install -y nginx 
 echo "Holberton School" > /var/www/html/index.html
-service nginx restart
+echo "user root;
+worker_processes auto;
+pid /run/nginx.pid;
+events {
+    worker_connections 768;
+}
+http {
+    server {
+        listen 80;
+        location / {
+            root /var/www/html
+            index index.html
+        }
+    }
+}
+" > /holberton.conf
+nginx -c /holberton.conf
