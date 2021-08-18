@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# nginex install and redirection to 404
+# nginx redirect 404
 sudo apt-get update
 sudo apt-get -y install nginx
 echo 'Holberton School' > /var/www/html/index.html

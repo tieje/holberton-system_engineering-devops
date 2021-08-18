@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# restart apache2 in docker container
+# fix the server
+echo "ServerName 127.0.0.1" >> /etc/apache2/apache2.conf 
 service apache2 restart
