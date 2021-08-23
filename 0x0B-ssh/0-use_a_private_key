@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-<<<<<<< HEAD
-ssh ubuntu@34.138.119.73 -i ~/.ssh/holberton
-=======
 # ssh into server
-# ./0-transfer_file ./1-install_nginx_web_server 34.138.234.27 ubuntu ~/.ssh/holberton.pub
-ssh -i ~/.ssh/holberton ubuntu@34.138.234.27
->>>>>>> 1234b4853cfa9df478a04bb0c047a70f4d8c6cf8
+# ./0-transfer_file ./1-install_nginx_web_server 34.139.127.8 ubuntu ~/.ssh/holberton.pub
+ssh -i ~/.ssh/holberton ubuntu@34.139.127.8
