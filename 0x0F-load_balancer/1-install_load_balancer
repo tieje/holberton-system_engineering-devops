@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
-# configures Haproxy on lb-01 server
+#installs HAproxy and configures to serve as load balancer
 sudo apt-get -y update
 sudo apt-get -y install haproxy
-
-echo "
-frontend ang3lp
+sudo sed -i "9i ENABLED=1" /etc/default/haproxy
+cat >> /etc/haproxy/haproxy.cfg << EOF
+frontend haproxynode
     bind *:80
     mode http
-    default_backend app
-backend app
+    default_backend backendnodes
+backend backendnodes
     balance roundrobin
-    server 1546-web-01 34.73.241.142:80 check
-    server 1546-web-02 18.234.51.43:80 check" >> /etc/haproxy/haproxy.cfg
+    server 2607-web-01 104.196.35.45:80 check
+    server 2607-web-02 34.73.125.171:80 check
+EOF
 
+sudo service haproxy reload
 sudo service haproxy restart
