@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# display info about subdomain
+case "$#" in
+    1)
+        subdomains=("www" "lb-01" "web-01" "web-02")
+        for sd in "${subdomains[@]}"; do
+            sub="$sd.$1"
+            record=$(dig "$sd.$1" | awk -v domain="^$sub" '$0 ~ domain {print $4}')
+            ip=$(dig "$sd.$1" | awk -v domain="^$sub" '$0 ~ domain {print $5}')
+            echo "The subdomain $sd is a $record record and points to $ip"
+        done
+        ;;
+    2)
+        sub="$2.$1"
+        record=$(dig "$sub" | awk -v domain="^$sub" '$0 ~ domain {print $4}')
+        ip=$(dig "$sub" | awk -v domain="^$sub" '$0 ~ domain {print $5}')
+        echo "The subdomain $2 is a $record record and points to $ip"
+        ;;
+esac
