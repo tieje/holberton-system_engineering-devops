@@ -1,41 +1,28 @@
-Title:
-
-Click-bait: Ace your Next SE Interview with This One Weird Trick! Processing URL Requests
-
+Click-bait: Ace your Next SE Interview with This One Weird Trick! Processing URL Requests
 Introduction
-
-`What happens when you type a URL in your browser and press Enter?` This is a common interview question used to assess a candidate's web stack knowledge. Many software engineering candidates struggle with this concept, myself included.
-
-DNS request
-
+`What happens when you type a URL in your browser and press Enter?` This is a common interview question used to assess a candidate's web stack knowledge. Many software engineering candidates struggle with this concept, myself included. The following are a few concepts that every developer should be familiar with.
+DNS Requests
 The Domain Name Server (DNS) is a collection of hundreds of root servers scattered around the world, each server containing info that points every domain request to an IP address. Because looking up the domain and IP address takes significant time, your browser will often save the lookup in the form of a cache stored on your local browser. Four caches are checked in this order:
-
 1. Browser cache
 2. Operating System cache
 3. Router cache
 4. ISP DNS cache
-
-In this way, the first time you check out a new website, the lookup may be slow. However, all domain requests after the first lookup, the lookup will be noticeably fast.
-
+In this way, the first time you check out a new website, the lookup may be slow. However, all domain requests after the first lookup will be noticeably fast because the IP address is saved on your pc.
 TCP/IP
-
 TCP/IP is named after the acronyms from two protocols used for Internet communications: the Transmission Control Protocol (TCP) and the Internet Protocol (IP). However, the term TCP/IP uses more than these two protocols. TCP/IP uses the Internet Control Message Protocol (ICMP) as well as the User Datagram Protocol (UDP). They are all standards for network communications.
-
 In the context of searching for a URL, TCP is used to deliver a stream of bytes, the URL, from your local computer, to the hosts on the IP network. TCP establishes a connection between the client and server. IP relays datagrams across network boundaries. IP addresses host interfaces while TCP is responsible for the actual transportation of data over physical space. When the URL datagram reaches the DNS, the Internet Protocol is used to interface with the DNS so that it can accept the request.
-
 Firewall
-
-
-
+If the firewall deems the incoming request safe based on your rules, a connection is established. A firewall should be in place for the bottlenecks of requests such as at the load-balancer.
 HTTPS/SSL
-
+HTTPS/SSL is a combination of two acronyms. HTTPS is a secure extension of HTTP, whereby the HTTPS protocol can be used to establish a secure connection with the server. The HTTPS protocol can only be used when the SSL/TLS certificate is configured. The SSL acronym stands for the Secure Sockets Layer. This allows for encrypted communication between a website and a web browser but has been entirely deprecated by TLS. TLS stands for Transport Layer Security. TLS is a cryptographic protocol that ensures that data sent over the connection is private.
+In our case, the URL would ideally travel using HTTPS/TLS protocols.
 Load-balancer
-
+The Load-balancer is a software on a server used to mitigate the risk of overloading requests by algorithmically distributing requests across multiple web servers.
 Web server
-
+The web server provides static content for incoming requests.
 Application server
-
+The application server is where the business logic is processed whenever the user interacts with the application.
 Database
-
+The application server may often contact the database, for CRUD functionality as it pertains to your application.
 Conclusion
-It's often a good idea to ask your interviewer on what part would they like you to focus on.
+Due to the depth of the question, it's often a good idea to ask your interviewer on what part would they like you to focus on when giving your answer.
