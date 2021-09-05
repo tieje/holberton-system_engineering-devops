@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Runs the whoami command with whatever argument is given
+runuser -u "$1" whoami
