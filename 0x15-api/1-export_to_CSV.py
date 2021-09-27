@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+
+'''#!/usr/bin/python3'''
 '''display standard output of todo list'''
 import requests
 import csv
@@ -21,4 +22,5 @@ if __name__ == "__main__":
         taskwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL)
         for task in todos_json:
             if task['userId'] == int(av[1]):
-                taskwriter.writerow([av[1], employee_name, task['completed'], task['title']])
+                taskwriter.writerow(
+                    [av[1], employee_name, task['completed'], task['title']])
